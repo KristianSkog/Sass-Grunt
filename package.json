@@ -1,0 +1,31 @@
+{
+  "name": "jsinl3",
+  "version": "1.0.0",
+  "description": "jsinl3",
+  "main": "gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^3.5.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.1.0",
+    "matchdep": "^1.0.1",
+    "pixrem": "^3.0.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristianSkog/Sass-Grunt.git"
+  },
+  "author": "Kristian Skog",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KristianSkog/Sass-Grunt/issues"
+  },
+  "homepage": "https://github.com/KristianSkog/Sass-Grunt#readme"
+}

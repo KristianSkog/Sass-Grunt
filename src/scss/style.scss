@@ -1,0 +1,48 @@
+@import 'mobil';
+@import 'variables';
+
+body {
+	background-color: $color;
+	font-size: $font;
+}
+
+/* Mixin */
+@mixin navHoverBackgroundColor {
+	background-color: $hoverBackgroundColor !important;
+}
+
+/* Navbar */
+nav{
+
+	li{
+		width: 150px !important;
+		
+
+		&:active{
+			@include navHoverBackgroundColor;
+		}
+	}
+
+	a{
+		text-align: center; 
+		&:hover{
+			color: $hoverColor !important;
+			@include navHoverBackgroundColor;
+		}
+	}
+	
+}
+
+@mixin border-radius($radius) {
+  	-webkit-border-radius: $radius;
+      -moz-border-radius: $radius;
+      	-ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* Image radius */
+img{
+	@include border-radius(20px);
+}
+
+
