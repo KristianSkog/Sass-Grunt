@@ -1,48 +1,74 @@
+// Import two other scss styles (Partials)
 @import 'mobil';
 @import 'variables';
-
-body {
-	background-color: $color;
-	font-size: $font;
-}
 
 /* Mixin */
 @mixin navHoverBackgroundColor {
 	background-color: $hoverBackgroundColor !important;
 }
 
+p{
+	font-size: $fontsize;
+}
 /* Navbar */
 nav{
-
 	li{
-		width: 150px !important;
-		
-
-		&:active{
-			@include navHoverBackgroundColor;
-		}
+		width: 150px;
+			&:active{
+				@include navHoverBackgroundColor;
+			}
 	}
 
 	a{
-		text-align: center; 
+	text-align: center;
 		&:hover{
 			color: $hoverColor !important;
 			@include navHoverBackgroundColor;
+
 		}
 	}
-	
 }
 
+// Mixin
 @mixin border-radius($radius) {
-  	-webkit-border-radius: $radius;
-      -moz-border-radius: $radius;
-      	-ms-border-radius: $radius;
+	-webkit-border-radius: $radius;
+  	 -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
           border-radius: $radius;
 }
 
 /* Image radius */
 img{
 	@include border-radius(20px);
+	width: $imageWidth;
 }
 
+// Loop
+@each $item, $color in (home, green),
+											 (product, blue),
+											 (about_us, orange) {
+	##{$item} {
+		color: $color !important;
+	}
+}
 
+// Extend
+.message {
+  text-decoration: underline;
+}
+	.chokladmunk {
+	  @extend .message;
+	  color: green;
+	}
+	.bananmunk {
+	  @extend .message;
+	  color: yellow;
+	}
+	.baconmunk {
+	  @extend .message;
+	  color: orange;
+	}
+	.vaniljmunk {
+	  @extend .message;
+	  color: red;
+	}

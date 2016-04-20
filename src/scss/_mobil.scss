@@ -1,9 +1,21 @@
+// Mobile view
+@import 'variables';
+// When screen gets smaller than 767px
+@media screen and (max-width: $break-small) {
+// Change navbar buttons width
 nav{
 	li{
-	@media screen and (max-width: $break-small) {
-		width: 100% !important;
-		text-align: center; 
-		$boolean = true;
-		}
+		width: $mobilNavLi;
+		text-align: center;
 	}
+}
+// Margin between Contact information and Ask question in about_us.html
+.margin-bottom{
+	// Variable for the if statement
+	$boolean: true;
+		// if statement
+		@if $boolean == true {
+			margin-bottom: 50px;
+		}
+}
 }

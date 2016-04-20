@@ -1,8 +1,9 @@
-/* Variabel*/
-$color: #000;
-$font: 2em;
-
+/* Variables */
+// Variables for style.scss
 $hoverBackgroundColor: gray;
-
+$fontsize: 20px;
 $hoverColor: blue;
+$imageWidth: 242px;
+// Variable for _mobil.scss
 $break-small: 767px;
+$mobilNavLi: 100% !important;
